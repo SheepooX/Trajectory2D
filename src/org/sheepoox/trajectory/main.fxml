@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1050.0"
+      prefWidth="1400.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
+    <HBox prefHeight="81.0" prefWidth="1024.0">
+        <VBox prefHeight="98.0" prefWidth="160.0">
+            <HBox.margin>
+                <Insets left="10.0"/>
+            </HBox.margin>
+            <Label text="Počáteční rychlost (m/s)">
+                <VBox.margin>
+                    <Insets bottom="5.0" top="5.0"/>
+                </VBox.margin>
+            </Label>
+            <Spinner id="velocitySpinner" editable="true"/>
+        </VBox>
+        <VBox prefHeight="98.0" prefWidth="160.0">
+            <HBox.margin>
+                <Insets left="10.0"/>
+            </HBox.margin>
+            <HBox prefHeight="25.0" prefWidth="160.0">
+                <VBox.margin>
+                    <Insets/>
+                </VBox.margin>
+                <Label prefHeight="25.0" prefWidth="114.0" text="Úhel (°)">
+                    <HBox.margin>
+                        <Insets bottom="5.0" top="5.0"/>
+                    </HBox.margin>
+                </Label>
+                <Label id="angleView" prefHeight="25.0" prefWidth="77.0" text="45.00 °">
+                    <padding>
+                        <Insets left="20.0"/>
+                    </padding>
+                </Label>
+            </HBox>
+            <Slider id="angleSlider" blockIncrement="0.1" max="90.0" showTickLabels="true" showTickMarks="true"
+                    value="45.0">
+                <padding>
+                    <Insets top="5.0"/>
+                </padding>
+            </Slider>
+        </VBox>
+        <VBox prefHeight="81.0" prefWidth="186.0">
+            <opaqueInsets>
+                <Insets/>
+            </opaqueInsets>
+            <HBox.margin>
+                <Insets left="10.0"/>
+            </HBox.margin>
+            <Label prefHeight="17.0" prefWidth="186.0" text="Tíhové zrychlení (m/s2)">
+                <VBox.margin>
+                    <Insets bottom="5.0" top="5.0"/>
+                </VBox.margin>
+            </Label>
+            <Spinner id="gAccelerationSpinner" editable="true" prefHeight="25.0" prefWidth="187.0"/>
+        </VBox>
+        <VBox prefHeight="81.0" prefWidth="365.0">
+            <HBox.margin>
+                <Insets left="10.0"/>
+            </HBox.margin>
+            <HBox prefHeight="25.0" prefWidth="160.0">
+                <VBox.margin>
+                    <Insets/>
+                </VBox.margin>
+                <Label prefHeight="17.0" prefWidth="331.0" text="Počáteční výška (m)">
+                    <HBox.margin>
+                        <Insets bottom="5.0" top="5.0"/>
+                    </HBox.margin>
+                </Label>
+                <Label id="heightView" prefHeight="25.0" prefWidth="117.0" text="50.00 m">
+                    <padding>
+                        <Insets left="20.0"/>
+                    </padding>
+                </Label>
+            </HBox>
+            <Slider id="heightSlider" blockIncrement="0.1" majorTickUnit="15" max="175" prefHeight="43.0"
+                    prefWidth="215.0" showTickLabels="true" showTickMarks="true" value="50">
+                <padding>
+                    <Insets top="5.0"/>
+                </padding>
+            </Slider>
+        </VBox>
+    </HBox>
+</VBox>
