@@ -21,9 +21,6 @@ public class Main extends Application {
     /*private ArrayList<XYChart.Series<Number, Number>> trajectories = new ArrayList<>();
     private int currentTrajectory = 0;*/
 
-    private final int WIDTH = 1400;
-    private final int HEIGHT = 1050;
-
     private LineChart<Number, Number> lineChart;
     private Spinner velocitySpinner;
     private Slider angleSlider;
@@ -36,9 +33,11 @@ public class Main extends Application {
         VBox root = FXMLLoader.load(getClass().getResource("main.fxml"));
 
         primaryStage.setTitle("Vizualizace Trajektorie - Černý");
-        primaryStage.setWidth(WIDTH);
-        primaryStage.setHeight(HEIGHT - 200);
-        primaryStage.setScene(new Scene(root, WIDTH, HEIGHT));
+        int screenWidth = 1400;
+        int screenHeight = 1050;
+        primaryStage.setWidth(screenWidth);
+        primaryStage.setHeight(screenHeight - 200);
+        primaryStage.setScene(new Scene(root, screenWidth, screenHeight));
         primaryStage.show();
 
         velocitySpinner = (Spinner) root.lookup("#velocitySpinner");
@@ -100,8 +99,8 @@ public class Main extends Application {
     */
     private XYChart.Series<Number, Number>[] getTrajectoryGraph(final double v0, final double a, final double g, final double h) {
         XYChart.Series<Number, Number>[] series = new XYChart.Series[2];
-        series[0] = new XYChart.Series<Number, Number>();
-        series[1] = new XYChart.Series<Number, Number>();
+        series[0] = new XYChart.Series<>();
+        series[1] = new XYChart.Series<>();
         // We cant divide with 0
         if (g == 0) return series;
         //
