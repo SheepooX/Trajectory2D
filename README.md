@@ -1,5 +1,5 @@
 # Trajectory2D
-A JavaFX application visualizing parabolic trajectory in two dimensional space.
+A JavaFX application visualizing parabolic trajectory in two dimensional space. 
 
 # UI
 
